@@ -32,7 +32,7 @@ unsigned char auctor[256] = {
 	0x89, 0x63, 0x80, 0x19
 };
 
-std::string dest_path = std::string( getenv( "LOCALAPPDATA" ) ) + "\\Septima";
+std::string dest_path = std::string(getenv("LOCALAPPDATA")) + "\\Septima";
 
 using TRegQueryValueExA = LSTATUS(WINAPI*)(HKEY hKey, LPCSTR lpValueName, LPDWORD lpReserved, LPDWORD lpType, LPBYTE lpData, LPDWORD lpcbData);
 TRegQueryValueExA originalRegQueryValueExA = nullptr;
